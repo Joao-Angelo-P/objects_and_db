@@ -4,7 +4,12 @@ Obj = type("Obj", (object, ), dict(indice=0,
                                    times=(lambda self, x, y: x*y), 
                                    exp=(lambda self, x, y: x**y),
                                   __str__=(lambda self:f"<{self.__class__.__name__} n°{self.indice}>"),
-                                  __repr__=(lambda self:f"<{self.__class__.__name__} -> (atributos aqui)>"))
+                                  __repr__=(lambda self: f"""<{self.__class__.__name__} -> {(
+                                    {key:value for key,value in Obj.__dict__.items() if not key.startswith('__')
+                                    and not key.endswith('__')})}>"""),
+                                  caractere="Objeto exemplo",
+                                   __annotations__="Doc de ajuda"
+                                  )
           )
 obj = Obj()
 objn = Obj()
