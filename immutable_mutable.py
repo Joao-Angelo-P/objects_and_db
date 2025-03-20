@@ -2,7 +2,7 @@
 # E teste de refencias e copias de objteos mutaveis
 
 class Teste(object):
-    def __init__(self, a: list = None, b: set = None, c: dict = None, d: str = None, e: int = False, f: float = False, g: tuple = None):
+    def __init__(self, a: list = None, b: set = None, c: dict = None, d: str = None, e: int = False, f: float = False, g: complex = False, h: tuple = None):
         """
         Da letra a a c são objetos mutaveis, entao tem como mudar em loco. Por isso é bom fazer copia
         """
@@ -31,10 +31,11 @@ class Teste(object):
         """
         Da letra d a g são objetos imutaveis, entao nao tem como mudar em loco
         """
-        self.d = d or ''
+        self.d = d or str()
         self.e = e or int(e)
         self.f = f or float(f)
-        self.g = g or tuple()
+        self.g = g or complex(g)
+        self.h = h or tuple()
 
 
 obj_teste = [[2, 3], {1, 6}, dict(a=0, b=1)]         
