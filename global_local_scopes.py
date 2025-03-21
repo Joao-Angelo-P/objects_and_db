@@ -36,7 +36,7 @@ except NameError as erro:
 y = "Existe"
 func2()
 func3(*[globals()[j] for j in globals() if type(globals()[j]).__name__=='function']) # func, func2, func3
-print(z)
+#print(z)
 #globals().pop('z') # para excluir
 try:
   print(z)
