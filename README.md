@@ -1,2 +1,3 @@
 # objects_and_db
-Objects interact with DataBase - Python
+Scopes, refences, objects and more...
+Coding testing and examples
